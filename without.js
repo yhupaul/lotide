@@ -1,4 +1,4 @@
-const assertArraysEqual = function (arrayOne, arrayTwo) {
+const assertArraysEqual = function(arrayOne, arrayTwo) {
   if (!(eqArrays(arrayOne, arrayTwo))) {
     console.log(`🙅‍♂🙅‍♂️🙅‍♂️ Assertion Failed`);
   } else {
@@ -7,13 +7,13 @@ const assertArraysEqual = function (arrayOne, arrayTwo) {
 };
 
 
-const eqArrays = function (arrayOne, arrayTwo) {
+const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
     return false;
   } else {
     for (let i = 0; i < arrayOne.length; i++) {
       if (arrayOne[i] !== arrayTwo[i]) {
-        console.log("line16")
+        console.log("line16");
         return false;
       }
     }
@@ -21,20 +21,20 @@ const eqArrays = function (arrayOne, arrayTwo) {
   return true;
 };
 
-const without = function (source, itemsToRemove) {
+const without = function(source, itemsToRemove) {
   let filterArr = [];
   if (eqArrays(source, itemsToRemove)) {
     return filterArr;
   }
   for (item of source) {
     //console.log("items",item);
-    if(!(itemsToRemove.includes(item))) {
-       filterArr.push(item);
+    if (!(itemsToRemove.includes(item))) {
+      filterArr.push(item);
     }
   }
   return filterArr;
 };
 
 const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); 
+console.log(without(words, ["lighthouse"]));
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
