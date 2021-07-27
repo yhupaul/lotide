@@ -1,25 +1,4 @@
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (!(eqArrays(arrayOne, arrayTwo))) {
-    console.log(`🙅‍♂🙅‍♂️🙅‍♂️ Assertion Failed`);
-  } else {
-    console.log(`🙆‍♂️🙆‍♂️🙆‍♂️ Assertion Passed`);
-  }
-};
-
-
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        console.log("line16");
-        return false;
-      }
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 const without = function(source, itemsToRemove) {
   let filterArr = [];
@@ -35,6 +14,4 @@ const without = function(source, itemsToRemove) {
   return filterArr;
 };
 
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"]));
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+module.exports = without;
