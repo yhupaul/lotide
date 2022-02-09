@@ -1,4 +1,6 @@
 const eqArrays = require('./eqArrays');
+const assertArrayEqual = require('./assertArraysEqual');
+
 
 const without = function(source, itemsToRemove) {
   let filterArr = [];
@@ -15,3 +17,7 @@ const without = function(source, itemsToRemove) {
 };
 
 module.exports = without;
+
+assertArrayEqual(["1", "2", "3"], [1, 2, "3"]);
+const words = ["hello", "world", "lighthouse"];
+console.log(without(words, ["lighthouse"]));
