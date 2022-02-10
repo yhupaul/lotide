@@ -7,7 +7,7 @@ const without = function(source, itemsToRemove) {
   if (eqArrays(source, itemsToRemove)) {
     return filterArr;
   }
-  for (item of source) {
+  for (let item of source) {
     //console.log("items",item);
     if (!(itemsToRemove.includes(item))) {
       filterArr.push(item);
@@ -21,3 +21,5 @@ module.exports = without;
 assertArrayEqual(["1", "2", "3"], [1, 2, "3"]);
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]));
+console.log(without([1, 2, 3], [1]))
+console.log(without(["1", "2", "3"], [1, 2, "3"]))

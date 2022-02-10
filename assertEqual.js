@@ -11,4 +11,4 @@ const assertEqual = function(actual, expected) {
 module.exports = assertEqual;
 
 // assertEqual('lighthouselabs', "Bootcamp");
-// assertEqual(3, 1);    //in order to confirm if it is working properly
+// assertEqual(1, 1);    //in order to confirm if it is working properly

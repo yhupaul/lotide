@@ -1,6 +1,6 @@
 
 const countLetters = function(allLetter) {
-  let newLetters = allLetter.toLowerCase().replaceAll(" ", "");
+  let newLetters = allLetter.toLowerCase().replaceAll(" ", ""); //replace(//g, "")
   
   let results = {};
   for (const word of newLetters) {
@@ -14,3 +14,4 @@ const countLetters = function(allLetter) {
 };
 
 module.exports = countLetters;
+// console.log(countLetters("I love you"));

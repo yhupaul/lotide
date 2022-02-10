@@ -1,3 +1,4 @@
+const assertEqual = require('./assertEqual')
 
 const middle = function(array) {
   let midArr = [];
@@ -16,3 +17,5 @@ const middle = function(array) {
 };
 
 module.exports = middle;
+
+console.log(assertEqual(middle([1, 2, 3, 4]), middle([1, 2, 3, 4])));
